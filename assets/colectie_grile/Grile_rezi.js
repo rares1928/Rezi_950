@@ -1,9 +1,9 @@
 module.exports = {
-  Intrebare1: ['1. Necroza miocardică poate fi demonstrată prin (pag. 135):',
-  'detectarea creșterii în sânge a markerilor de necroză miocardică',
-  'demonstrarea pierderii de miocard viabil folosind diverse metode imagistice',
-  'A'
-  ]
+  Intrebare1: {
+    enunt: "balabkjda",
+    variante: ["1ahld", "Asdlak"],
+    raspunsuri: [true, false]
+  }
 };
 
 // Intrebari medicina:
