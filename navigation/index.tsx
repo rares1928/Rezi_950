@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 
-import NotFoundScreen from '../screens/NotFoundScreen';
+
 import GrilaScreen from '../screens/Grila';
 import { RootStackParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -20,7 +20,7 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{ title: 'Welcome', headerTitleAlign: 'center' }}
+          options={{ title: 'Rezi 950', headerTitleAlign: 'center' }}
         />
         <Stack.Screen name="Profile" component={ProfileScreen} />
         <Stack.Screen name="Grila" component={GrilaScreen} />
