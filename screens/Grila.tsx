@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {Button, Alert} from 'react-native';
 import {CheckBox} from 'react-native-elements';
-import { StyleSheet, Text, View } from 'react-native';
+import {StatusBar, FlatList,SafeAreaView,TouchableOpacity, StyleSheet, Text, View } from 'react-native';
 
 const stil=StyleSheet.create(
   {
@@ -9,85 +9,140 @@ const stil=StyleSheet.create(
     {
       fontSize: 20,
     },
-    container:
+    stil_var_init:
     {
       flexDirection:'row',
       flex:1,
-      backgroundColor:'rgba(250,250,250,0)'
+      alignItems: "center",
     },
-    separator:
+    stil_var_corecta:
     {
-      marginVertical: 10,
-      borderBottomColor: '#737373',
-      borderBottomWidth: StyleSheet.hairlineWidth,
+      flexDirection:'row',
+      backgroundColor:'green'
+    },
+    stil_var_gresita:
+    {
+      flexDirection:'row',
+      backgroundColor:'red'
+    },
+    container: {
+      flex: 1,
+      marginTop: StatusBar.currentHeight || 0,
+    },
+    item: {
+      padding: 20,
+      marginVertical: 8,
+      marginHorizontal: 16,
+    },
+    title: {
+      fontSize: 20,
     }
   }
 )
 
+const Varianta = ({ item, apasa, style }) => (
+  <TouchableOpacity onPress={apasa} style={[stil.item, style]}>
+    <Text style={stil.title}>{item.title}</Text>
+  </TouchableOpacity>
+);
+
+
 export default function GrilaScreen({ navigation, route }) {
-  const [isV1Checked, setV1] = useState(false);
-  const [isV2Checked, setV2] = useState(false);
+  const [isV1Checked, setV1] = useState(true);
+  const [isV2Checked, setV2] = useState(true);
   const [isV3Checked, setV3] = useState(false);
   const [isV4Checked, setV4] = useState(false);
   const [isV5Checked, setV5] = useState(false);
 
-  const Separator = () => (
-  <View style={stil.separator} />
-  );
+  const DATA = [
+    {
+      id: "0",
+      title: route.params.variante[0],
 
+    },
+    {
+      id: "1",
+      title: route.params.variante[1]
+    },
+    {
+      id: "2",
+      title: route.params.variante[2]
+    },
+    {
+      id: "3",
+      title: route.params.variante[3]
+    },
+    {
+      id: "4",
+      title: route.params.variante[4]
+    }
+  ];
 
+  const map = ({index}) => {
+    if(index===0)
+    {
+      return(setV1(!isV1Checked))
+    }
+    else if(index=="1")
+    {
+      return(setV2(!isV2Checked))
+    }
+    else if(index=="2")
+    {
+      return(setV3(!isV3Checked))
+    }
+    else if(index=="3")
+    {
+      return(setV4(!isV4Checked))
+    }
+    else if(index=="4")
+    {
+      return(setV5(!isV5Checked))
+    }
+  }
+
+  const culoare = ({index}) => {
+    if(index===1)
+    {
+      return(isV1Checked)
+    }
+    else if(index=="1")
+    {
+      return(isV2Checked)
+    }
+    else if(index=="2")
+    {
+      return(isV3Checked)
+    }
+    else if(index=="3")
+    {
+      return(isV4Checked)
+    }
+    else if(index=="4")
+    {
+      return(isV5Checked)
+    }
+  }
+
+  const afiseazaItem = ({ item, index}) => {
+    const backgroundColor= culoare(index) ? 'blue':'green'
+    return (
+      <Varianta
+        item={item}
+        onPress={map(index)}
+        style={{backgroundColor}}
+      />
+    );
+  };
   return (
-    <View>
-      <Text style={stil.stil_text_grila}>{route.params.enunt}</Text>
-      <Separator />
-      <CheckBox
-        title={route.params.variante[0]}
-        checked={isV1Checked}
-        onPress={() => setV1(!isV1Checked)}
+    <SafeAreaView style={stil.container}>
+      <FlatList
+        data={DATA}
+        renderItem={afiseazaItem}
+        keyExtractor={(item) => item.id}
+        extraData={isV1Checked}
       />
-      <CheckBox
-        title={route.params.variante[1]}
-        checked={isV2Checked}
-        onPress={() => setV2(!isV2Checked)}
-      />
-      <CheckBox
-        title={route.params.variante[2]}
-        checked={isV3Checked}
-        onPress={() => setV3(!isV3Checked)}
-      />
-      <CheckBox
-        title={route.params.variante[3]}
-        checked={isV4Checked}
-        onPress={() => setV4(!isV4Checked)}
-      />
-      <CheckBox
-        title={route.params.variante[4]}
-        checked={isV5Checked}
-        onPress={() => setV5(!isV5Checked)}
-      />
-
-
-          <Button
-            title="Verifica"
-            color='green'
-            onPress = {()=>
-            {
-              if(isV1Checked==route.params.raspunsuri[0])
-              {
-                return(Alert.alert('Corect'))
-              }
-            }
-          }
-          />
-
-
-          <Button
-            title="Continua"
-            color='blue'
-            />
-
-
-    </View>
+    </SafeAreaView>
   );
 
 };
