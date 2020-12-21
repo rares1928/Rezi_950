@@ -6,7 +6,7 @@ export default function HomeScreen({ navigation }) {
     <Button
       title="Go to Jane's profile"
       onPress={() =>
-        navigation.navigate('Rezolva Grile', { enunt: 'Cate celule rosii sunt in corpul uman', variante: ['Ana are muuuuuulte mere', '1', '>1', 'multe', '2147687583'], raspunsuri: [true, false, true, false, false] })
+        navigation.navigate('Rezolva Grile', { enunt: 'Necroza miocardică poate fi demonstrată prin (pag. 135):', variante: ['detectarea creșterii în sânge a markerilor de necroză miocardică', 'demonstrarea pierderii de miocard viabil folosind diverse metode imagistice', 'detectarea prezenței undelor Q patologice noi pe electrocardiogramă', 'examen morfopatologic', 'pe baza tabloului clinic'], raspunsuri: [true, false, true, false, false] })
       }
     />
   );
