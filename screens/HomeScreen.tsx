@@ -31,10 +31,10 @@ export default function HomeScreen({ navigation }) {
   const [selectedId, setSelectedId] = useState(null);
 
   const renderItem = ({ item }) => {
-    const backgroundColor = item.id === selectedId ? "#6e3b6e" : "#f9c2ff";
+    const backgroundColor = item.id === selectedId ? "#1eb092" : "#e4c77a";
     const navigheaza=()=>{
       if(item.id==3){
-        return(navigation.navigate('Rezolva Grile', { enunt: 'Necroza miocardică poate fi demonstrată prin (pag. 135):', variante: ['detectarea creșterii în sânge a markerilor de necroză miocardică', 'demonstrarea pierderii de miocard viabil folosind diverse metode imagistice', 'detectarea prezenței undelor Q patologice noi pe electrocardiogramă', 'examen morfopatologic', 'pe baza tabloului clinic'], raspunsuri: [true, false, true, false, false] }));
+        return(navigation.navigate('Selecteaza Grile'));
       }
     };
     return (

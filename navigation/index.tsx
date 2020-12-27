@@ -5,6 +5,7 @@ import { ColorSchemeName } from 'react-native';
 
 
 import GrilaScreen from '../screens/Grila';
+import SelectieGrileScreen from '../screens/SelectieGrile';
 import GrilaRaresScreen from '../screens/GrilaRares';
 import { RootStackParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -23,7 +24,7 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
           component={HomeScreen}
           options={{ title: 'Rezi 950', headerTitleAlign: 'center' }}
         />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="Selecteaza Grile" component={SelectieGrileScreen} />
         <Stack.Screen name="Rezolva Grile" component={GrilaRaresScreen} />
       </Stack.Navigator>
     </NavigationContainer>
