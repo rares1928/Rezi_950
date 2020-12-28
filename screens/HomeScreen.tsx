@@ -35,6 +35,8 @@ export default function HomeScreen({ navigation }) {
     const navigheaza=()=>{
       if(item.id==3){
         return(navigation.navigate('Selecteaza Grile'));
+      } else if(item.id==4) {
+        return(navigation.navigate('Bancul zilei'))
       }
     };
     return (

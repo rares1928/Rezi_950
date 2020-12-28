@@ -11,6 +11,7 @@ import { RootStackParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import BanculZilei from '../screens/BanculZilei';
 
 
 const Stack = createStackNavigator();
@@ -26,6 +27,7 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
         />
         <Stack.Screen name="Selecteaza Grile" component={SelectieGrileScreen} />
         <Stack.Screen name="Rezolva Grile" component={GrilaRaresScreen} />
+        <Stack.Screen name="Bancul zilei" component={BanculZilei} />
       </Stack.Navigator>
     </NavigationContainer>
   );

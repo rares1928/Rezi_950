@@ -102,72 +102,137 @@ export default class SelectieGrileScreen extends Component {
     const array = [
 
       {
-        expanded: false, selected:false, category_Name: "Mobiles", sub_Category: [{ id: 1, name: 'Mi',subSelected:false }, { id: 2, name: 'RealMe',subSelected:false }, { id: 3, name: 'Samsung',subSelected:false },
-        { id: 4, name: 'Infinix',subSelected:false }, { id: 5, name: 'Oppo',subSelected:false }, { id: 6, name: 'Apple',subSelected:false }, { id: 7, name: 'Honor',subSelected:false }]
+        expanded: false, selected:false, category_Name: "Sepsis și Tratamentul Infecțiilor Bacteriene", sub_Category: [{ id: 1, name: 'Sepsis și șocul septic',subSelected:false }]
       },
 
       {
-        expanded: false, category_Name: "Laptops", sub_Category: [{ id: 8, name: 'Dell' }, { id: 9, name: 'MAC' }, { id: 10, name: 'HP' },
-        { id: 11, name: 'ASUS' }]
+        expanded: false, category_Name: "Echilibrul Hidric, Fluide și Electroliți", sub_Category: [{ id: 2, 
+          name: 'Tulburări electrolitice și acido-bazice. Tulburări ale echilibrului acido-bazic. Tulburări ale echilibrului hidro-electrolitic' }]
       },
 
       {
-        expanded: false, category_Name: "Computer Accessories", sub_Category: [{ id: 12, name: 'Pendrive' }, { id: 13, name: 'Bag' },
-        { id: 14, name: 'Mouse' }, { id: 15, name: 'Keyboard' }]
+        expanded: false, category_Name: "Hematologie", sub_Category: [{ id: 3, name: 'Anemiile. Anemia feriprivă. Deficitul de vitamină B12 și acid folic' }, { id: 4, name: 'Anemiile hemolitice dobândite' },]
       },
 
       {
-        expanded: false, category_Name: "Home Entertainment", sub_Category: [{ id: 16, name: 'Home Audio Speakers' },
-        { id: 17, name: 'Home Theatres' }, { id: 18, name: 'Bluetooth Speakers' }, { id: 19, name: 'DTH Set Top Box' }]
+        expanded: false, category_Name: "REUMATOLOGIE", sub_Category: [{ id: 5, name: 'Boli inflamatorii reumatice cronice. Poliartrita reumatoidă' },
+        { id: 6, name: 'Spondilita anchilozantă și spondiloartritele' }, { id: 7, name: 'Lupusul eritematos sistemic' }]
       },
 
       {
-        expanded: false, category_Name: "TVs by brand", sub_Category: [{ id: 20, name: 'Mi' },
-        { id: 21, name: 'Thomson' }, { id: 22, name: 'LG' }, { id: 23, name: 'SONY' }]
+        expanded: false, category_Name: "ENDOCRINOLOGIE", sub_Category: [{ id: 8, name: 'Glanda tiroidă. Hipotiroidismul adultului. Tireotoxicoza' },
+        { id: 9, name: 'Cancerul tiroidian' }]
       },
 
       {
-        expanded: false, category_Name: "Kitchen Appliances", sub_Category: [{ id: 24, name: 'Microwave Ovens' },
-        { id: 25, name: 'Oven Toaster Grills (OTG)' }, { id: 26, name: 'Juicer/Mixer/Grinder' }, { id: 27, name: 'Electric Kettle' }]
+        expanded: false, category_Name: "DIABETUL ZAHARAT", sub_Category: []
       },
       {
-        expanded: false, category_Name: "Kitchen Appliances", sub_Category: []
+        expanded: false, category_Name: "NEUROLOGIE", sub_Category: [{ id: 10, name: 'Accidentele vasculare cerebrale' }, { id: 11, name: 'Infectiile sistemului nervos - meningite, encefalite' }, 
+        { id: 12, name: 'Pierderea conștienței și comele' }]
       },
       {
-        expanded: false, category_Name: "Kitchen Appliances", sub_Category: []
+        expanded: false, category_Name: "AFECȚIUNILE RESPIRATORII", sub_Category: [{ id: 13, name: 'Astmul bronșic' }, { id: 14, name: 'Bronhopneumopatia obstructivă cronică' }, 
+        { id: 15, name: 'Pneumoniile' }, { id: 16, name: 'Tuberculoza' }, { id: 17, name: 'Cancerele bronhopulmonare' }]
       },
       {
-        expanded: false, category_Name: "Kitchen Appliances", sub_Category: []
+        expanded: false, category_Name: "BOALA VENOASĂ TROMBOEMBOLICĂ", sub_Category: [{ id: 1, name: 'Trombembolismul pulmonar'}]
       },
       {
-        expanded: false, category_Name: "Kitchen Appliances", sub_Category: []
+        expanded: false, category_Name: "CARDIOLOGIE", sub_Category: [{ id: 18, name: 'Stopul cardiac' }, { id: 19, name: 'Aritmiile și tulburările de conducere' }, 
+        { id: 20, name: 'Insuficiența cardiacă. Insuficiența cardiacă cronică. Insuficiența cardiacă acută' }, 
+        { id: 21, name: 'Boala coronariană. Boala coronariană cronică stabilă. Angina pectorală stabilă. Alte forme de boală cardiacă ischemică. Sindroame coronariene acute cu supradenivelare de segment ST. Sindroame coronariene acute fără supradenivelare de segment ST' }, 
+        { id: 22, name: 'Valvulopatiile. Endocardita infecțioasă' }, { id: 23, name: 'Cardiomiopatiile' }, { id: 24, name: 'Pericardita' }]
       },
       {
-        expanded: false, category_Name: "Kitchen Appliances", sub_Category: []
+        expanded: false, category_Name: "HIPERTENSIUNEA", sub_Category: []
       },
       {
-        expanded: false, category_Name: "Kitchen Appliances", sub_Category: []
+        expanded: false, category_Name: "GASTROENTEROLOGIE", sub_Category: [{ id: 25, name: 'Refluxul gastroesofagian' }, { id: 26, name: 'Boala ulceroasă' }, 
+        { id: 27, name: 'Bolile inflamatorii intestinale' }]
       },
       {
-        expanded: false, category_Name: "Kitchen Appliances", sub_Category: []
+        expanded: false, category_Name: "AFECȚIUNILE FICATULUI", sub_Category: [{ id: 28, name: 'Hepatitele virale' }, 
+        { id: 29, name: 'Ciroza hepatică' }, ]
       },
       {
-        expanded: false, category_Name: "Kitchen Appliances", sub_Category: []
+        expanded: false, category_Name: "PATOLOGIA RENALĂ ȘI A TRACTULUI URINAR", sub_Category: [{ id: 30, name: 'Glomerulopatii' }, { id: 31, name: 'Nefropatii tubulo-interstițiale' }, 
+        { id: 32, name: 'Boala cronică de rinichi' }]
       },
       {
-        expanded: false, category_Name: "Kitchen Appliances", sub_Category: []
+        expanded: false, category_Name: "INFECȚII CU TRANSMITERE SEXUALĂ ȘI HIV", sub_Category: [{ id: 33, name: 'Infecția HIV' }]
       },
       {
-        expanded: false, category_Name: "Kitchen Appliances", sub_Category: []
+        expanded: false, category_Name: "TERAPIE INTENSIVĂ", sub_Category: [{ id: 34, name: 'Insuficienta respiratorii si a Sindromului de detresă respiratorie acută' }]
       },
       {
-        expanded: false, category_Name: "Kitchen Appliances", sub_Category: []
+        expanded: false, category_Name: "EVALUAREA PERIOPERATORIE ȘI MANAGEMENTUL PACIENTULUI CHIRURGICAL", sub_Category: []
       },
       {
-        expanded: false, category_Name: "Kitchen Appliances", sub_Category: []
+        expanded: false, category_Name: "SÂNGERAREA CHIRURGICALĂ: TULBURĂRI DE SÂNGERARE, STATUSUL DE HIPERCOAGULABILITATE", sub_Category: []
       },
       {
-        expanded: false, category_Name: "Muie Liverpool", sub_Category: [{id:29,name:"jones e bad"}]
+        expanded: false, category_Name: "INFECȚIILE CHIRURGICALE", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "TRAUMA", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "ARSURILE", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "PERETELE ABDOMINAL; HERNIILE", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "ESOFAGUL", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "STOMACUL ȘI DUODENUL", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "INTESTINUL SUBȚIRE ȘI APENDICELE", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "COLON, RECT, ANUS", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "TRACTUL BILIAR", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "PANCREASUL", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "FICATUL ȘI SPLINA", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "AFECȚIUNI ALE SISTEMULUI VASCULAR", sub_Category: [{ id: 35, name: 'Boala arterială periferică ocluzivă' }, { id: 18, name: 'Patologie venoasă' }]
+      },
+      {
+        expanded: false, category_Name: "ORL: AFECȚIUNI ALE CAPULUI ȘI GÂTULUI", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "ORTOPEDIE: AFECȚIUNI ALE SISTEMULUI MUSCULOSCHELETAL", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "UROLOGIE: AFECȚIUNI ALE SISTEMULUI GENITO-URINAR", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "DERMATOLOGIE", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "PEDIATRIE", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "GINECOLOGIE ȘI AFECȚIUNILE SÂNULUI", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "OBSTETRICĂ", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "AFECȚIUNI PSIHIATRICE", sub_Category: []
+      },
+      {
+        expanded: false, category_Name: "EPIDEMIOLOGIE ȘI ETICĂ", sub_Category: []
       },
     ];
 
